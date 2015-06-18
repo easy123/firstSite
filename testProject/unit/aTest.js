@@ -7,18 +7,18 @@ var test = require('./orderTest.js');
 
 
 
-describe('Testing Group', function() {
-    it('should return -1', function() {
-        query(null).then(function(data) {
-            return (data).should.equal(-1);
+describe('Test Return 1', function() {
+    it('Reutrn 1', function() {
+        return   query('anything').then(function(data) {
+            data.should.equal(1);
         });
     });
 });
+describe('Test Return 1', function() {
+    it('Reutrn 1', function() {
+        return   query(null).then(function(data) {
 
-describe('Testing Group', function() {
-    it('should return 1', function() {
-        query().then(function(data) {
-            return (data).should.equal(1);
+            data.should.equal(1);
         });
     });
 });
