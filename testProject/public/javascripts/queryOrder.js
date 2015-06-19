@@ -3,6 +3,7 @@
  */
 var dbHelper = require('../db/dbHelper.js');
 
+var orderId = new Array();
 exports.getOrder = function (sql) {
    return dbHelper.promiseQuery(sql).then(function (data) {
         var orderSql = "select * from orders where 1=1 ";
@@ -21,7 +22,7 @@ exports.getOrder = function (sql) {
             else
                 where+=","+data[i].productID;
             orderId.push(data[i].id);//订单编号
-        };
+        }
         where+=")";
         proSql+="and id in"+where+" order by id desc";
 
