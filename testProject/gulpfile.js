@@ -12,7 +12,7 @@ var del = require('del');
 
 var paths = {
     scripts: ['./public/javascripts/orderTest.js', './public/javascripts/queryOrder.js'],
-    styles: ['./public/css/*.css'],
+    styles: ['./public/style/*.css'],
     images: ['./public/images/*'],
     zip: ['**/*', '!./.idea', '!./.idea/**/*', '!./node_modules', '!./node_modules/**/*']
 };
